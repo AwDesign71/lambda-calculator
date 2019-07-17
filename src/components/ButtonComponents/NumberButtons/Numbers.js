@@ -7,7 +7,7 @@ import {numbers} from '../../../data';
  const Numbers = () => {
   // STEP 2 - add the imported data to state
 const [count, doCount] = useState(numbers);
-console.log(count)
+//console.log(count)
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
@@ -15,6 +15,6 @@ console.log(count)
        it any props needed by the child component*/}
       {count.map((numbers, index) => <NumberButton numbers = {numbers} key = {index} />)} 
     </div>
-  );
+    );
 };
 export default Numbers;
