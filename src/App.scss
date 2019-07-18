@@ -3,10 +3,33 @@
     margin: 0 auto;
     padding: 0;
 }
-.App {
+.bgCalc {
  width: 472px;
  height: 708px;
  margin: 0 auto;
  background: #a71d36;
  border-radius: 15px;
+ .App {
+     position: relative;
+     margin-top: 19px;
+ }
+}
+ .align {
+     margin: 11px 64px;
+     padding: 0 0 0 115px;
+     border: 1px solid #fff;
+     font-size: 22px;
+     color: #eed;
+ }
+ .operator, .special, .number {
+    width: 65px;
+    height: 65px;
+    border-radius: 35px;
+    top: 162px;
+    right: 22px;
+    margin: 33px 0;
+    font-size: 17px;
+}
+.operator, .special, .number {
+    margin: 9px 43px;
 }

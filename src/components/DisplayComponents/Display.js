@@ -1,8 +1,10 @@
 import React from "react";
-import { numbers } from './../../data';
+/* import { numbers } from './../../data';
+import Numbers from './../ButtonComponents/NumberButtons/Numbers'; */
 const Display = (props) => {
-  return <div>{/* Display any props data here */
-      props.numbers    
-    }</div>;
+  console.log()
+  return <div className='align'>{/* Display any props data here */}
+    {props.showNumbers}
+  </div>;
 };
 export default Display;
