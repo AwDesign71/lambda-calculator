@@ -14,7 +14,7 @@ const [count, doCount] = useState(numbers);
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-      {count.map((numbers, index) => <NumberButton numbers = {numbers} key = {index} displayNum={props.displayNum} />)} 
+      {count.map((numbers, index) => <NumberButton numbers={numbers} key={index} calculateNums={props.calculateNums} />)} 
     </div>
     );
 };
