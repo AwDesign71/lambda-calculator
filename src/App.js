@@ -11,7 +11,7 @@ import Display from './components/DisplayComponents/Display';
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators'
 import Specials from './components/ButtonComponents/SpecialButtons/Specials'
-//import NumberButton from './components/ButtonComponents/NumberButtons/NumberButton'
+
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   
@@ -24,8 +24,13 @@ function App() {
    setshwCount(shwCount => shwCount + nums);
  };
  const shwOperators = (operator)=> {
-   setshwCount(shwCount => shwCount +' '+operator+' ');
+   (operator === '=') ? (setshwCount(shwCount=>eval(shwCount))) : setshwCount(shwCount => 
+    shwCount +' '+operator+' ');
  };
+ const shwSpecials = (special)=> {
+   (special === 'C') ? (setshwCount(shwCount=>shwCount='')) : setshwCount(shwCount=>shwCount+' '+special+' ');
+   
+ }
   return (
     <div className="container bgCalc">
       <Logo />
@@ -34,7 +39,7 @@ function App() {
        <Display showNumbers={shwCount}/>
        <Numbers calculateNums={calculateNums} />
        <Operators shwOperators={shwOperators} />
-       <Specials />
+       <Specials shwSpecials={shwSpecials} />
       </div>
 
     </div>
